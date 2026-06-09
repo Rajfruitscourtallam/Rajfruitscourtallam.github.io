@@ -1,0 +1,290 @@
+:root{
+--primary:#1B4332;
+--secondary:#40916C;
+--gold:#D4A373;
+--cream:#F8F5F0;
+--dark:#2D2D2D;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:var(--cream);
+color:var(--dark);
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+background:rgba(27,67,50,0.95);
+backdrop-filter:blur(10px);
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 5%;
+}
+
+.logo-text{
+color:white;
+font-size:1.5rem;
+font-weight:bold;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('images/mangostan.png');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero-content{
+max-width:800px;
+padding:20px;
+}
+
+.hero-logo{
+width:180px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:50px;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn-primary{
+background:var(--gold);
+color:black;
+}
+
+.btn-secondary{
+border:2px solid white;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:var(--primary);
+}
+
+/* TRUST */
+
+.trust{
+background:white;
+}
+
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.trust-card{
+background:var(--cream);
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-logo{
+width:100%;
+max-width:350px;
+display:block;
+margin:auto;
+}
+
+/* FRUIT CARDS */
+
+.fruit-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.fruit-card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.fruit-card:hover{
+transform:translateY(-10px);
+}
+
+.fruit-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.fruit-card h3{
+padding:20px;
+text-align:center;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+background:var(--primary);
+color:white;
+}
+
+.contact h2{
+color:white;
+}
+
+.contact-btn{
+background:var(--gold);
+color:black;
+}
+
+/* FOOTER */
+
+footer{
+background:#10251c;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.nav-links{
+display:none;
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.hero-logo{
+width:130px;
+}
+
+}
