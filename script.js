@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // WhatsApp order functionality
-    const phoneNumber = '919876543210'; // Replace with your actual WhatsApp number
+    const phoneNumber = '+91 8870879582'; // Replace with your actual WhatsApp number
     
     function sendWhatsAppOrder(fruitName) {
         const message = `Hello! I would like to order ${fruitName} from Raj Fruits. Please let me know the availability and pricing.`;
