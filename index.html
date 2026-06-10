@@ -98,27 +98,19 @@
             cursor: pointer;
         }
 
-        /* Hero Section - Premium */
+        /* Hero Section - With Your Background Image */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #0f3b26 0%, #1a5d3c 50%, #0f3b26 100%);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('images/backgroundimage.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             display: flex;
             align-items: center;
             text-align: center;
             margin-top: 84px;
             position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-            background-size: cover;
-            opacity: 0.3;
         }
 
         .hero-content {
@@ -286,39 +278,6 @@
             font-size: 13px;
             color: #888;
             letter-spacing: 0.5px;
-        }
-
-        /* Location Section */
-        .location-section {
-            padding: 0 0 80px 0;
-            text-align: center;
-        }
-
-        .location-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
-            padding: 30px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .location-card i {
-            font-size: 40px;
-            color: #ffd700;
-            margin-bottom: 15px;
-        }
-
-        .location-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            color: #1a5d3c;
-            margin-bottom: 8px;
-        }
-
-        .location-card p {
-            color: #666;
-            font-size: 14px;
         }
 
         /* Fruits Section */
@@ -612,6 +571,9 @@
             .mobile-menu {
                 display: block;
             }
+            .hero {
+                background-attachment: scroll;
+            }
             .hero-content h2 {
                 font-size: 40px;
                 letter-spacing: 2px;
@@ -687,7 +649,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Your Background Image -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -713,7 +675,7 @@
         </div>
     </section>
 
-    <!-- Features Section - Clean 5 Items -->
+    <!-- Features Section -->
     <section class="features">
         <div class="container">
             <div class="features-grid">
