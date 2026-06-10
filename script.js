@@ -9,48 +9,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Smooth scrolling for anchor links
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#privacy') return;
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
+                if (nav.classList.contains('show')) {
+                    nav.classList.remove('show');
+                }
             }
         });
     });
     
-    // WhatsApp order functionality
-    const phoneNumber = '+91 8870879582'; // Replace with your actual WhatsApp number
-    
-    function sendWhatsAppOrder(fruitName) {
-        const message = `Hello! I would like to order ${fruitName} from Raj Fruits. Please let me know the availability and pricing.`;
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-        window.open(whatsappUrl, '_blank');
-    }
-    
-    // Add click event to all WhatsApp order buttons
-    const orderButtons = document.querySelectorAll('.whatsapp-order');
-    orderButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const fruit = this.getAttribute('data-fruit');
-            sendWhatsAppOrder(fruit);
-        });
-    });
-    
-    // Navbar background change on scroll
+    // Navbar background change
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
         if (window.scrollY > 100) {
             header.style.background = '#1b4332';
-            header.style.padding = '10px 0';
         } else {
             header.style.background = '#2d6a4f';
-            header.style.padding = '15px 0';
         }
     });
     
@@ -75,45 +59,26 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'all 0.6s ease-out';
         observer.observe(el);
     });
-});
-
-// Mobile menu styles (add to CSS or keep here)
-const style = document.createElement('style');
-style.textContent = `
-    @media (max-width: 768px) {
-        nav ul.show {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            right: 0;
-            background: #2d6a4f;
-            padding: 20px;
-            text-align: center;
-            gap: 15px;
-        }
-    }
-`;
-document.head.appendChild(style);
-// Active navigation link highlighting
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav ul li a');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+    
+    // Active link highlighting
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
     });
 });
