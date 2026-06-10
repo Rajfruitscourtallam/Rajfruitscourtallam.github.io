@@ -3,54 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raj Fruits - Fresh & Natural Since 1980</title>
+    <title>Raj Fruits - Fresh & Natural Since 1980 | Courtallam</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <!-- Header / Navigation -->
-<header>
-    <div class="container">
-        <div class="logo">
-            <div class="logo-wrapper">
-                <img src="Logo.png" alt="Raj Fruits Logo" class="logo-img">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Logo.png" alt="Raj Fruits Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/50x50?text=RJ'">
                 <div class="logo-text">
                     <h1>RAJ FRUITS</h1>
+                    <p>Fresh & Natural Since 1980</p>
                 </div>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#fruits">Fruits</a></li>
+                    <li><a href="#mango">Mango Varieties</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#fruits">Fruits</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact Details</a></li>
-            </ul>
-        </nav>
-        <div class="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
-</header>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge">Since 1980</span>
-                <h2>Fresh & Natural</h2>
-                <h1>RAJ FRUITS</h1>
-                <div class="trust-badge">
-                    <i class="fas fa-award"></i>
-                    <span>40+ YEARS OF TRUST & QUALITY</span>
+                <div class="hero-logo">
+                    <img src="Logo.png" alt="Raj Fruits" onerror="this.src='https://via.placeholder.com/80x80?text=RJ'">
                 </div>
-                <p>Courtallam · Tenkasi</p>
+                <h2>RAJ FRUITS</h2>
+                <h3>Fresh & Natural Since 1980</h3>
+                <div class="trust-badge">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>40+ YEARS OF TRUST & QUALITY</span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="location">Courtallam · Tenkasi</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/+91 8870879582?text=Hello%21%20I%27d%20like%20to%20place%20an%20order%20for%20fresh%20fruits" class="btn-whatsapp" target="_blank">
+                    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20know%20about%20your%20fruits%20and%20place%20an%20order" class="btn-whatsapp" target="_blank">
                         <i class="fab fa-whatsapp"></i> Order on WhatsApp
                     </a>
                     <a href="#fruits" class="btn-outline">Explore Fruits</a>
@@ -90,95 +96,59 @@
                 <p>Fresh & Premium Fruits</p>
             </div>
             <div class="fruits-grid">
-                <div class="fruit-card" data-name="Mangosteen" data-price="500">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1593888108550-fd77f7d4d3df?w=300" alt="Mangosteen">
+                        <img src="images/mangosteen.jpg" alt="Mangosteen" onerror="this.src='https://via.placeholder.com/300x200?text=Mangosteen'">
                     </div>
                     <h3>Mangosteen</h3>
-                    <p>₹500/kg</p>
-                    <button class="whatsapp-order" data-fruit="Mangosteen">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
-                <div class="fruit-card" data-name="Rambutan" data-price="350">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1553802343-4f0919a60ac4?w=300" alt="Rambutan">
+                        <img src="images/rambutan.jpg" alt="Rambutan" onerror="this.src='https://via.placeholder.com/300x200?text=Rambutan'">
                     </div>
                     <h3>Rambutan</h3>
-                    <p>₹350/kg</p>
-                    <button class="whatsapp-order" data-fruit="Rambutan">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
-                <div class="fruit-card" data-name="Durian" data-price="800">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1585671795844-84f9d10e2de8?w=300" alt="Durian">
+                        <img src="images/durian.jpg" alt="Durian" onerror="this.src='https://via.placeholder.com/300x200?text=Durian'">
                     </div>
                     <h3>Durian</h3>
-                    <p>₹800/kg</p>
-                    <button class="whatsapp-order" data-fruit="Durian">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
-                <div class="fruit-card" data-name="Avocado" data-price="250">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=300" alt="Avocado">
+                        <img src="images/avocado.jpg" alt="Avocado" onerror="this.src='https://via.placeholder.com/300x200?text=Avocado'">
                     </div>
                     <h3>Avocado</h3>
-                    <p>₹250/piece</p>
-                    <button class="whatsapp-order" data-fruit="Avocado">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
-                <div class="fruit-card" data-name="Orange" data-price="120">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1547514701-427821017e18?w=300" alt="Orange">
+                        <img src="images/orange.jpg" alt="Orange" onerror="this.src='https://via.placeholder.com/300x200?text=Orange'">
                     </div>
                     <h3>Orange</h3>
-                    <p>₹120/kg</p>
-                    <button class="whatsapp-order" data-fruit="Orange">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
-                <div class="fruit-card" data-name="Jackfruit" data-price="200">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1593032465175-481ac4f401a0?w=300" alt="Jackfruit">
+                        <img src="images/jackfruit.jpg" alt="Jackfruit" onerror="this.src='https://via.placeholder.com/300x200?text=Jackfruit'">
                     </div>
                     <h3>Jackfruit</h3>
-                    <p>₹200/kg</p>
-                    <button class="whatsapp-order" data-fruit="Jackfruit">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
-                <div class="fruit-card" data-name="Guava" data-price="80">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1534536288715-e488b6adb2f8?w=300" alt="Guava">
+                        <img src="images/guava.jpg" alt="Guava" onerror="this.src='https://via.placeholder.com/300x200?text=Guava'">
                     </div>
                     <h3>Guava</h3>
-                    <p>₹80/kg</p>
-                    <button class="whatsapp-order" data-fruit="Guava">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
-                <div class="fruit-card" data-name="Star Fruit" data-price="150">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1615485925600-9728bebb1528?w=300" alt="Star Fruit">
+                        <img src="images/starfruit.jpg" alt="Star Fruit" onerror="this.src='https://via.placeholder.com/300x200?text=Star+Fruit'">
                     </div>
                     <h3>Star Fruit</h3>
-                    <p>₹150/kg</p>
-                    <button class="whatsapp-order" data-fruit="Star Fruit">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
-                <div class="fruit-card" data-name="Gooseberry" data-price="180">
+                <div class="fruit-card">
                     <div class="fruit-image">
-                        <img src="https://images.unsplash.com/photo-1598518613922-6cedc9058120?w=300" alt="Gooseberry">
+                        <img src="images/gooseberry.jpg" alt="Gooseberry" onerror="this.src='https://via.placeholder.com/300x200?text=Gooseberry'">
                     </div>
                     <h3>Gooseberry</h3>
-                    <p>₹180/kg</p>
-                    <button class="whatsapp-order" data-fruit="Gooseberry">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
             </div>
         </div>
@@ -190,57 +160,50 @@
             <div class="section-header">
                 <h2>OUR SPECIAL</h2>
                 <p>Mango Varieties</p>
+                <span class="mango-tag">Own Production | Wholesale & Retail</span>
             </div>
             <div class="mango-grid">
                 <div class="mango-card">
-                    <span class="mango-label">Premium</span>
+                    <div class="mango-image">
+                        <img src="images/alphonso.jpg" alt="Alphonso" onerror="this.src='https://via.placeholder.com/250x200?text=Alphonso'">
+                    </div>
                     <h3>Alphonso</h3>
-                    <p>King of mangoes - Rich, creamy, aromatic</p>
-                    <button class="whatsapp-order" data-fruit="Alphonso Mango">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
                 <div class="mango-card">
+                    <div class="mango-image">
+                        <img src="images/thottapuri.jpg" alt="Thottapuri" onerror="this.src='https://via.placeholder.com/250x200?text=Thottapuri'">
+                    </div>
                     <h3>Thottapuri</h3>
-                    <p>Sweet and fiberless</p>
-                    <button class="whatsapp-order" data-fruit="Thottapuri Mango">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
                 <div class="mango-card">
+                    <div class="mango-image">
+                        <img src="images/mallika.jpg" alt="Mallika" onerror="this.src='https://via.placeholder.com/250x200?text=Mallika'">
+                    </div>
                     <h3>Mallika</h3>
-                    <p>Delicious blend of sweetness</p>
-                    <button class="whatsapp-order" data-fruit="Mallika Mango">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
                 <div class="mango-card">
+                    <div class="mango-image">
+                        <img src="images/imampasand.jpg" alt="Imam Pasand" onerror="this.src='https://via.placeholder.com/250x200?text=Imam+Pasand'">
+                    </div>
                     <h3>Imam Pasand</h3>
-                    <p>Royal taste, unique flavor</p>
-                    <button class="whatsapp-order" data-fruit="Imam Pasand Mango">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
                 <div class="mango-card">
+                    <div class="mango-image">
+                        <img src="images/malgova.jpg" alt="Malgova" onerror="this.src='https://via.placeholder.com/250x200?text=Malgova'">
+                    </div>
                     <h3>Malgova</h3>
-                    <p>Sweet and tangy delight</p>
-                    <button class="whatsapp-order" data-fruit="Malgova Mango">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
                 <div class="mango-card">
+                    <div class="mango-image">
+                        <img src="images/banganapalli.jpg" alt="Banganapalli" onerror="this.src='https://via.placeholder.com/250x200?text=Banganapalli'">
+                    </div>
                     <h3>Banganapalli</h3>
-                    <p>Large, sweet, golden yellow</p>
-                    <button class="whatsapp-order" data-fruit="Banganapalli Mango">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
                 <div class="mango-card">
+                    <div class="mango-image">
+                        <img src="images/kalapadi.jpg" alt="Kalapadi" onerror="this.src='https://via.placeholder.com/250x200?text=Kalapadi'">
+                    </div>
                     <h3>Kalapadi</h3>
-                    <p>Traditional variety</p>
-                    <button class="whatsapp-order" data-fruit="Kalapadi Mango">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </button>
                 </div>
             </div>
         </div>
@@ -282,16 +245,16 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400" alt="Fresh Fruits">
+                    <img src="images/gallery1.jpg" alt="Farm" onerror="this.src='https://via.placeholder.com/400x300?text=Farm+Photo'">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1582058103445-9ee7774f3df1?w=400" alt="Mango Farm">
+                    <img src="images/gallery2.jpg" alt="Harvest" onerror="this.src='https://via.placeholder.com/400x300?text=Harvest+Photo'">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1593888108550-fd77f7d4d3df?w=400" alt="Fruit Display">
+                    <img src="images/gallery3.jpg" alt="Fruits Display" onerror="this.src='https://via.placeholder.com/400x300?text=Fruit+Display'">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1547514701-427821017e18?w=400" alt="Orange Harvest">
+                    <img src="images/gallery4.jpg" alt="Shop" onerror="this.src='https://via.placeholder.com/400x300?text=Shop+Photo'">
                 </div>
             </div>
         </div>
@@ -303,16 +266,17 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h2>Contact Us</h2>
-                    <p><i class="fas fa-map-marker-alt"></i> Courtallam, Tenkasi District, Tamil Nadu</p>
-                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                    <p><i class="fas fa-envelope"></i> info@rajfruits.com</p>
-                    <p><i class="far fa-clock"></i> Mon-Sat: 8:00 AM - 8:00 PM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Courtallam, Tenkasi District, Tamil Nadu - 627802</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+918870879582">+91 88708 79582</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918870879582">+91 88708 79582 (WhatsApp)</a></p>
+                    <p><i class="fas fa-envelope"></i> rajfruits@gmail.com</p>
+                    <p><i class="far fa-clock"></i> Mon-Sat: 8:00 AM - 8:00 PM | Sun: 9:00 AM - 6:00 PM</p>
                 </div>
                 <div class="whatsapp-box">
                     <i class="fab fa-whatsapp"></i>
                     <h3>Order on WhatsApp</h3>
-                    <p>Click below to place your order instantly!</p>
-                    <a href="https://wa.me/919876543210?text=Hello%21%20I%27d%20like%20to%20place%20an%20order%20for%20fresh%20fruits" class="btn-whatsapp-large" target="_blank">
+                    <p>Click below to inquire about seasonal fruits, prices, and place your order!</p>
+                    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20know%20about%20your%20fruits%20and%20place%20an%20order" class="btn-whatsapp-large" target="_blank">
                         <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
                     </a>
                 </div>
@@ -325,6 +289,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
+                    <img src="Logo.png" alt="Raj Fruits" class="footer-logo-img" onerror="this.src='https://via.placeholder.com/50x50?text=RJ'">
                     <h3>RAJ FRUITS</h3>
                     <p>Fresh & Natural Since 1980</p>
                 </div>
@@ -333,22 +298,51 @@
                     <a href="#fruits">Fruits</a>
                     <a href="#mango">Mango Varieties</a>
                     <a href="#about">About</a>
+                    <a href="#gallery">Gallery</a>
                     <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy Policy</a>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/918870879582"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Raj Fruits. All rights reserved.</p>
+                <p>&copy; 2024 Raj Fruits. All rights reserved. | Courtallam, Tenkasi</p>
             </div>
         </div>
     </footer>
 
+    <!-- Privacy Policy Modal/Section -->
+    <div id="privacy" class="privacy-modal">
+        <div class="privacy-content">
+            <a href="#" class="close-privacy">&times;</a>
+            <h2>Privacy Policy</h2>
+            <h3>Raj Fruits - Privacy Policy</h3>
+            <p><strong>Last updated:</strong> January 2024</p>
+            
+            <h4>1. Information We Collect</h4>
+            <p>When you contact us via WhatsApp or phone, we may collect your name, phone number, and order details to process your requests.</p>
+            
+            <h4>2. How We Use Your Information</h4>
+            <p>We use your information to process orders, respond to inquiries, and improve our services. We do not share your personal information with third parties.</p>
+            
+            <h4>3. WhatsApp Communication</h4>
+            <p>When you message us on WhatsApp, your communication is encrypted. We only use your WhatsApp number to respond to your orders and queries.</p>
+            
+            <h4>4. Data Security</h4>
+            <p>We take appropriate security measures to protect your personal information from unauthorized access.</p>
+            
+            <h4>5. Contact Us</h4>
+            <p>If you have questions about this privacy policy, contact us at +91 88708 79582 or email rajfruits@gmail.com</p>
+            
+            <a href="#" class="btn-close">Close</a>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919876543210?text=Hello%21%20I%27d%20like%20to%20place%20an%20order%20for%20fresh%20fruits" class="float-whatsapp" target="_blank">
+    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20know%20about%20your%20fruits%20and%20place%20an%20order" class="float-whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i>
         <span>Order on WhatsApp</span>
     </a>
