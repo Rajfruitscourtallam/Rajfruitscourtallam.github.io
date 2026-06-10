@@ -1,1 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Fruits - Fresh & Natural Since 1980 | Courtallam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background: #2d6a4f;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #ffd700;
+            padding: 5px;
+            object-fit: cover;
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+        .logo-text p {
+            font-size: 10px;
+            opacity: 0.9;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=1600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 70px;
+        }
+        .hero-content {
+            color: white;
+            width: 100%;
+        }
+        .hero-logo img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #ffd700;
+            background: white;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        .hero-content h2 {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        .hero-content h3 {
+            font-size: 22px;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+        .trust-badge i {
+            color: #ffd700;
+            font-size: 16px;
+        }
+        .trust-badge span {
+            background: rgba(0,0,0,0.6);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .location {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-whatsapp, .btn-outline {
+            padding: 12px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+        }
+        .btn-whatsapp:hover, .btn-outline:hover {
+            transform: translateY(-3px);
+        }
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            text-align: center;
+            padding: 35px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+        .feature-card i {
+            font-size: 48px;
+            color: #2d6a4f;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2d6a4f;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        /* Fruits & Mango */
+        .fruits, .mango {
+            padding: 80px 0;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-header h2 {
+            font-size: 36px;
+            color: #2d6a4f;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #ffd700;
+        }
+        .section-header p {
+            color: #777;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .mango-tag {
+            display: inline-block;
+            background: #2d6a4f;
+            color: #ffd700;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .fruits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .fruit-card, .mango-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+        .fruit-card:hover, .mango-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .fruit-image, .mango-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        .fruit-image img, .mango-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .fruit-card:hover .fruit-image img,
+        .mango-card:hover .mango-image img {
+            transform: scale(1.05);
+        }
+        .fruit-card h3, .mango-card h3 {
+            margin: 15px 0 5px;
+            font-size: 18px;
+            color: #2d6a4f;
+        }
+        .mango {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+        .mango-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 25px;
+        }
+        /* About */
+        .about {
+            padding: 80px 0;
+            background: #f0f4f0;
+            text-align: center;
+        }
+        .about-text h2 {
+            font-size: 36px;
+            color: #2d6a4f;
+            margin-bottom: 20px;
+        }
+        .about-text p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat h4 {
+            font-size: 38px;
+            color: #ffd700;
+            text-shadow: 2px 2px 0 #2d6a4f;
+        }
+        .stat p {
+            font-weight: 500;
+            color: #2d6a4f;
+        }
+        /* Gallery */
+        .gallery {
+            padding: 80px 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        /* Contact */
+        .contact {
+            padding: 80px 0;
+            background: #2d6a4f;
+            color: white;
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-info h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            color: #ffd700;
+        }
+        .whatsapp-box {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .whatsapp-box i {
+            font-size: 48px;
+            color: #25D366;
+        }
+        .whatsapp-box h3 {
+            font-size: 24px;
+            margin: 15px 0;
+        }
+        .btn-whatsapp-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        .btn-whatsapp-large:hover {
+            transform: scale(1.03);
+        }
+        /* Footer */
+        footer {
+            background: #1b4332;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-logo {
+            text-align: center;
+        }
+        .footer-logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-links a, .social-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover, .social-links a:hover {
+            color: #ffd700;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            font-size: 20px;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+        /* Floating WhatsApp */
+        .float-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: transform 0.3s;
+            z-index: 99;
+            text-decoration: none;
+        }
+        .float-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        /* Privacy Modal */
+        .privacy-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .privacy-modal:target {
+            display: flex;
+        }
+        .privacy-content {
+            background: white;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 35px;
+            border-radius: 20px;
+            position: relative;
+            color: #333;
+        }
+        .close-privacy {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: 32px;
+            text-decoration: none;
+            color: #555;
+        }
+        .privacy-content h2 {
+            color: #2d6a4f;
+            margin-bottom: 15px;
+        }
+        .privacy-content h4 {
+            margin: 20px 0 10px;
+            color: #2d6a4f;
+        }
+        .btn-close {
+            display: inline-block;
+            background: #2d6a4f;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        /* Mobile */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #1b4332;
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+                gap: 15px;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .hero-content h2 {
+                font-size: 32px;
+            }
+            .hero-content h3 {
+                font-size: 18px;
+            }
+            .trust-badge span {
+                font-size: 10px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Logo.png" alt="Raj Fruits Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/50x50?text=RJ'">
+                <div class="logo-text">
+                    <h1>RAJ FRUITS</h1>
+                    <p>Fresh & Natural Since 1980</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#fruits">Fruits</a></li>
+                    <li><a href="#mango">Mango Varieties</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="Logo.png" alt="Raj Fruits" onerror="this.src='https://via.placeholder.com/90x90?text=RJ'">
+                </div>
+                <h2>RAJ FRUITS</h2>
+                <h3>Fresh & Natural Since 1980</h3>
+                <div class="trust-badge">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>40+ YEARS OF TRUST & QUALITY</span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="location">Courtallam · Tenkasi</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    </a>
+                    <a href="#fruits" class="btn-outline">Explore Fruits</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-tractor"></i>
+                    <h3>Own Farm Production</h3>
+                    <p>Fresh from our own farms</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Premium Quality</h3>
+                    <p>Handpicked with care</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Wholesale & Retail</h3>
+                    <p>For all your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fruits" class="fruits">
+        <div class="container">
+            <div class="section-header">
+                <h2>OUR FRUITS</h2>
+                <p>Fresh & Premium Fruits</p>
+            </div>
+            <div class="fruits-grid">
+                <div class="fruit-card"><div class="fruit-image"><img src="images/mangosteen.jpeg" alt="Mangosteen" onerror="this.src='https://via.placeholder.com/300x200?text=Mangosteen'"></div><h3>Mangosteen</h3></div>
+                <div class="fruit-card"><div class="fruit-image"><img src="images/Rambutan.jpeg" alt="Rambutan" onerror="this.src='https://via.placeholder.com/300x200?text=Rambutan'"></div><h3>Rambutan</h3></div>
+                <div class="fruit-card"><div class="fruit-image"><img src="images/Durian.jpeg" alt="Durian" onerror="this.src='https://via.placeholder.com/300x200?text=Durian'"></div><h3>Durian</h3></div>
+                <div class="fruit-card"><div class="fruit-image"><img src="images/Avocado.jpeg" alt="Avocado" onerror="this.src='https://via.placeholder.com/300x200?text=Avocado'"></div><h3>Avocado</h3></div>
+                <div class="fruit-card"><div class="fruit-image"><img src="images/Orange.jpeg" alt="Orange" onerror="this.src='https://via.placeholder.com/300x200?text=Orange'"></div><h3>Orange</h3></div>
+                <div class="fruit-card"><div class="fruit-image"><img src="images/Jackfruit.jpeg" alt="Jackfruit" onerror="this.src='https://via.placeholder.com/300x200?text=Jackfruit'"></div><h3>Jackfruit</h3></div>
+                <div class="fruit-card"><div class="fruit-image"><img src="images/Apple.jpeg" alt="Apple" onerror="this.src='https://via.placeholder.com/300x200?text=Apple'"></div><h3>Apple</h3></div>
+                <div class="fruit-card"><div class="fruit-image"><img src="images/Star Fruit.jpeg" alt="Star Fruit" onerror="this.src='https://via.placeholder.com/300x200?text=Star+Fruit'"></div><h3>Star Fruit</h3></div>
+                <div class="fruit-card"><div class="fruit-image"><img src="images/Gooseberry.jpeg" alt="Gooseberry" onerror="this.src='https://via.placeholder.com/300x200?text=Gooseberry'"></div><h3>Gooseberry</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mango" class="mango">
+        <div class="container">
+            <div class="section-header">
+                <h2>OUR SPECIAL</h2>
+                <p>Mango Varieties</p>
+                <div class="mango-tag">Own Production | Wholesale & Retail</div>
+            </div>
+            <div class="mango-grid">
+                <div class="mango-card"><div class="mango-image"><img src="images/alphonso.jpg" alt="Alphonso" onerror="this.src='https://via.placeholder.com/250x200?text=Alphonso'"></div><h3>Alphonso</h3></div>
+                <div class="mango-card"><div class="mango-image"><img src="images/thottapuri.jpg" alt="Thottapuri" onerror="this.src='https://via.placeholder.com/250x200?text=Thottapuri'"></div><h3>Thottapuri</h3></div>
+                <div class="mango-card"><div class="mango-image"><img src="images/mallika.jpg" alt="Mallika" onerror="this.src='https://via.placeholder.com/250x200?text=Mallika'"></div><h3>Mallika</h3></div>
+                <div class="mango-card"><div class="mango-image"><img src="images/imampasand.jpg" alt="Imam Pasand" onerror="this.src='https://via.placeholder.com/250x200?text=Imam+Pasand'"></div><h3>Imam Pasand</h3></div>
+                <div class="mango-card"><div class="mango-image"><img src="images/malgova.jpg" alt="Malgova" onerror="this.src='https://via.placeholder.com/250x200?text=Malgova'"></div><h3>Malgova</h3></div>
+                <div class="mango-card"><div class="mango-image"><img src="images/banganapalli.jpg" alt="Banganapalli" onerror="this.src='https://via.placeholder.com/250x200?text=Banganapalli'"></div><h3>Banganapalli</h3></div>
+                <div class="mango-card"><div class="mango-image"><img src="images/kalapadi.jpg" alt="Kalapadi" onerror="this.src='https://via.placeholder.com/250x200?text=Kalapadi'"></div><h3>Kalapadi</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>For over 40 years, Raj Fruits has been delivering the finest quality fruits from our own farms to your table. Located in Courtallam, Tenkasi, we take pride in freshness and quality.</p>
+                <p>Every fruit is handpicked with care. Whether you need wholesale or retail, we've got you covered!</p>
+                <div class="stats">
+                    <div class="stat"><h4>40+</h4><p>Years of Excellence</p></div>
+                    <div class="stat"><h4>50+</h4><p>Fruit Varieties</p></div>
+                    <div class="stat"><h4>10000+</h4><p>Happy Customers</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Gallery</h2>
+                <p>Fresh from our farms</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/gallery1.jpg" alt="Farm" onerror="this.src='https://via.placeholder.com/400x300?text=Farm'"></div>
+                <div class="gallery-item"><img src="images/gallery2.jpg" alt="Harvest" onerror="this.src='https://via.placeholder.com/400x300?text=Harvest'"></div>
+                <div class="gallery-item"><img src="images/gallery3.jpg" alt="Fruits" onerror="this.src='https://via.placeholder.com/400x300?text=Fruits'"></div>
+                <div class="gallery-item"><img src="images/gallery4.jpg" alt="Shop" onerror="this.src='https://via.placeholder.com/400x300?text=Shop'"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> Courtallam, Tenkasi District, Tamil Nadu - 627802</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+918870879582">+91 88708 79582</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918870879582">+91 88708 79582 (WhatsApp)</a></p>
+                    <p><i class="fas fa-envelope"></i> rajfruits@gmail.com</p>
+                    <p><i class="far fa-clock"></i> Mon-Sat: 8AM-8PM | Sun: 9AM-6PM</p>
+                </div>
+                <div class="whatsapp-box">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Order on WhatsApp</h3>
+                    <p>Click below to inquire about seasonal fruits, prices, and place your order!</p>
+                    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits" class="btn-whatsapp-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo.png" alt="Raj Fruits" class="footer-logo-img" onerror="this.src='https://via.placeholder.com/50x50?text=RJ'">
+                    <h3>RAJ FRUITS</h3>
+                    <p>Fresh & Natural Since 1980</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#fruits">Fruits</a>
+                    <a href="#mango">Mango</a>
+                    <a href="#about">About</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/918870879582"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Raj Fruits. All rights reserved. | Courtallam, Tenkasi</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="privacy" class="privacy-modal">
+        <div class="privacy-content">
+            <a href="#" class="close-privacy">&times;</a>
+            <h2>Privacy Policy</h2>
+            <p><strong>Last updated:</strong> January 2024</p>
+            <h4>Information We Collect</h4>
+            <p>When you contact us via WhatsApp, we may collect your name, phone number, and order details.</p>
+            <h4>How We Use Your Information</h4>
+            <p>We use your information to process orders and respond to inquiries. We do not share with third parties.</p>
+            <h4>Contact Us</h4>
+            <p>Call or WhatsApp: +91 88708 79582 | Email: rajfruits@gmail.com</p>
+            <a href="#" class="btn-close">Close</a>
+        </div>
+    </div>
+
+    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits" class="float-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.querySelector('.mobile-menu')?.addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#privacy') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) target.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('nav ul')?.classList.remove('show');
+            });
+        });
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = '#1b4332';
+            } else {
+                header.style.background = '#2d6a4f';
+            }
+        });
+    </script>
+</body>
+</html>
