@@ -12,20 +12,23 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #2d2d2d;
             background: #fff;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         /* Header */
         header {
-            background: #2d6a4f;
+            background: #1a5d3c;
             color: white;
             padding: 15px 0;
             position: fixed;
@@ -34,16 +37,19 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
         }
+
         .logo-img {
             width: 45px;
             height: 45px;
@@ -52,19 +58,23 @@
             padding: 5px;
             object-fit: cover;
         }
+
         .logo-text h1 {
             font-size: 20px;
             letter-spacing: 1px;
         }
+
         .logo-text p {
-            font-size: 10px;
+            font-size: 9px;
             opacity: 0.9;
         }
+
         nav ul {
             display: flex;
             list-style: none;
             gap: 25px;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -72,149 +82,266 @@
             font-size: 14px;
             transition: color 0.3s;
         }
+
         nav ul li a:hover {
             color: #ffd700;
         }
+
         .mobile-menu {
             display: none;
             font-size: 24px;
             cursor: pointer;
         }
-        /* Hero */
+
+        /* Hero Section - Exactly like your image */
         .hero {
-            min-height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=1600');
-            background-size: cover;
-            background-position: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a5d3c 0%, #2d8a5a 50%, #1a5d3c 100%);
             display: flex;
             align-items: center;
             text-align: center;
             margin-top: 70px;
+            position: relative;
         }
+
         .hero-content {
             color: white;
             width: 100%;
+            padding: 40px 20px;
         }
+
+        .hero-logo {
+            margin-bottom: 20px;
+        }
+
         .hero-logo img {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             border: 3px solid #ffd700;
             background: white;
             padding: 8px;
-            margin-bottom: 20px;
         }
+
         .hero-content h2 {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h3 {
+            font-size: 28px;
+            font-weight: 600;
             letter-spacing: 2px;
         }
-        .hero-content h3 {
-            font-size: 22px;
+
+        .hero-content h4 {
+            font-size: 18px;
             font-weight: 400;
+            letter-spacing: 6px;
             margin-top: 5px;
+            opacity: 0.9;
         }
+
         .trust-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin: 25px 0;
-            flex-wrap: wrap;
+            margin: 30px 0 20px;
         }
-        .trust-badge i {
-            color: #ffd700;
-            font-size: 16px;
-        }
+
         .trust-badge span {
-            background: rgba(0,0,0,0.6);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 13px;
+            background: rgba(0,0,0,0.3);
+            padding: 8px 25px;
+            border-radius: 40px;
+            font-size: 14px;
             font-weight: 600;
+            letter-spacing: 2px;
+            display: inline-block;
         }
-        .location {
-            font-size: 20px;
-            margin-bottom: 30px;
+
+        .farm-text {
+            font-size: 16px;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
+            word-spacing: 8px;
         }
+
         .hero-buttons {
             display: flex;
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
-        .btn-whatsapp, .btn-outline {
-            padding: 12px 30px;
-            border-radius: 40px;
+
+        .btn-whatsapp, .btn-explore {
+            padding: 14px 35px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.3s;
+            font-size: 16px;
+            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            cursor: pointer;
         }
+
         .btn-whatsapp {
             background: #25D366;
             color: white;
+            border: none;
         }
-        .btn-outline {
-            border: 2px solid white;
-            color: white;
+
+        .btn-explore {
             background: transparent;
+            color: white;
+            border: 2px solid white;
         }
-        .btn-whatsapp:hover, .btn-outline:hover {
+
+        .btn-whatsapp:hover, .btn-explore:hover {
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        /* Features */
+
+        /* Stats Section */
+        .stats-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: #1a5d3c;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* Features Section */
         .features {
             padding: 60px 0;
             background: #f8f9fa;
         }
+
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+            text-align: center;
         }
+
         .feature-card {
             text-align: center;
-            padding: 35px 20px;
+            padding: 25px 15px;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
             transition: transform 0.3s;
         }
+
         .feature-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
         }
+
         .feature-card i {
-            font-size: 48px;
-            color: #2d6a4f;
+            font-size: 40px;
+            color: #ffd700;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #1a5d3c;
+        }
+
+        .feature-card p {
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .trust-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .trust-card i {
+            font-size: 38px;
+            color: #1a5d3c;
             margin-bottom: 15px;
         }
-        .feature-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #2d6a4f;
+
+        .trust-card h4 {
+            font-size: 18px;
+            color: #1a5d3c;
+            margin-bottom: 8px;
         }
-        .feature-card p {
+
+        .trust-card p {
+            font-size: 13px;
             color: #666;
-            font-size: 14px;
         }
-        /* Fruits & Mango */
+
+        .location-badge {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background: #f0f4f0;
+            border-radius: 10px;
+        }
+
+        .location-badge p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1a5d3c;
+        }
+
+        /* Fruits Section */
         .fruits, .mango {
             padding: 80px 0;
         }
+
         .section-header {
             text-align: center;
             margin-bottom: 50px;
         }
+
         .section-header h2 {
             font-size: 36px;
-            color: #2d6a4f;
+            color: #1a5d3c;
             position: relative;
             display: inline-block;
             padding-bottom: 10px;
         }
+
         .section-header h2::after {
             content: '';
             position: absolute;
@@ -225,167 +352,130 @@
             height: 3px;
             background: #ffd700;
         }
+
         .section-header p {
             color: #777;
             margin-top: 10px;
-            font-size: 18px;
+            font-size: 16px;
         }
-        .mango-tag {
-            display: inline-block;
-            background: #2d6a4f;
-            color: #ffd700;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-top: 10px;
-        }
+
         .fruits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 30px;
         }
+
         .fruit-card, .mango-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: all 0.3s;
             text-align: center;
             padding-bottom: 15px;
+            cursor: pointer;
         }
+
         .fruit-card:hover, .mango-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
         }
+
         .fruit-image, .mango-image {
             height: 200px;
             overflow: hidden;
         }
+
         .fruit-image img, .mango-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s;
         }
+
         .fruit-card:hover .fruit-image img,
         .mango-card:hover .mango-image img {
             transform: scale(1.05);
         }
+
         .fruit-card h3, .mango-card h3 {
-            margin: 15px 0 5px;
+            margin: 15px 0;
             font-size: 18px;
-            color: #2d6a4f;
+            color: #1a5d3c;
         }
+
         .mango {
             background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
         }
+
         .mango-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
             gap: 25px;
         }
-        /* About */
-        .about {
-            padding: 80px 0;
-            background: #f0f4f0;
-            text-align: center;
-        }
-        .about-text h2 {
-            font-size: 36px;
-            color: #2d6a4f;
-            margin-bottom: 20px;
-        }
-        .about-text p {
-            max-width: 800px;
-            margin: 0 auto 20px;
-            color: #555;
-            line-height: 1.8;
-        }
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-        .stat {
-            text-align: center;
-        }
-        .stat h4 {
-            font-size: 38px;
+
+        .mango-tag {
+            display: inline-block;
+            background: #1a5d3c;
             color: #ffd700;
-            text-shadow: 2px 2px 0 #2d6a4f;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
         }
-        .stat p {
-            font-weight: 500;
-            color: #2d6a4f;
-        }
-        /* Gallery */
-        .gallery {
-            padding: 80px 0;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .gallery-item {
-            height: 250px;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-        /* Contact */
+
+        /* Contact Section */
         .contact {
             padding: 80px 0;
-            background: #2d6a4f;
+            background: #1a5d3c;
             color: white;
         }
+
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
+            align-items: center;
         }
+
         .contact-info h2 {
             font-size: 32px;
             margin-bottom: 20px;
         }
+
         .contact-info p {
             margin: 15px 0;
             display: flex;
             align-items: center;
             gap: 12px;
         }
+
         .contact-info a {
             color: white;
             text-decoration: none;
         }
+
         .contact-info a:hover {
             color: #ffd700;
         }
+
         .whatsapp-box {
             background: rgba(255,255,255,0.1);
             padding: 40px;
             border-radius: 20px;
             text-align: center;
         }
+
         .whatsapp-box i {
             font-size: 48px;
             color: #25D366;
         }
+
         .whatsapp-box h3 {
             font-size: 24px;
             margin: 15px 0;
         }
+
         .btn-whatsapp-large {
             display: inline-flex;
             align-items: center;
@@ -393,21 +483,24 @@
             background: #25D366;
             color: white;
             padding: 14px 32px;
-            border-radius: 40px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             margin-top: 20px;
             transition: transform 0.3s;
         }
+
         .btn-whatsapp-large:hover {
             transform: scale(1.03);
         }
+
         /* Footer */
         footer {
-            background: #1b4332;
+            background: #0f3b26;
             color: white;
             padding: 40px 0 20px;
         }
+
         .footer-content {
             display: flex;
             justify-content: space-between;
@@ -417,39 +510,47 @@
             padding-bottom: 20px;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
+
         .footer-logo {
             text-align: center;
         }
+
         .footer-logo-img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             margin-bottom: 10px;
         }
+
         .footer-links {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
+
         .footer-links a, .social-links a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
         }
+
         .footer-links a:hover, .social-links a:hover {
             color: #ffd700;
         }
+
         .social-links {
             display: flex;
             gap: 15px;
             font-size: 20px;
         }
+
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            font-size: 13px;
+            font-size: 12px;
             opacity: 0.8;
         }
+
         /* Floating WhatsApp */
         .float-whatsapp {
             position: fixed;
@@ -469,61 +570,19 @@
             z-index: 99;
             text-decoration: none;
         }
+
         .float-whatsapp:hover {
             transform: scale(1.1);
         }
-        /* Privacy Modal */
-        .privacy-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.85);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        .privacy-modal:target {
-            display: flex;
-        }
-        .privacy-content {
-            background: white;
-            max-width: 500px;
-            max-height: 80vh;
-            overflow-y: auto;
-            padding: 35px;
-            border-radius: 20px;
-            position: relative;
-            color: #333;
-        }
-        .close-privacy {
-            position: absolute;
-            top: 12px;
-            right: 20px;
-            font-size: 32px;
-            text-decoration: none;
-            color: #555;
-        }
-        .privacy-content h2 {
-            color: #2d6a4f;
-            margin-bottom: 15px;
-        }
-        .privacy-content h4 {
-            margin: 20px 0 10px;
-            color: #2d6a4f;
-        }
-        .btn-close {
-            display: inline-block;
-            background: #2d6a4f;
-            color: white;
-            padding: 10px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
+
         /* Mobile */
+        @media (max-width: 1000px) {
+            .stats-grid, .features-grid, .trust-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+        }
+
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -531,7 +590,7 @@
                 top: 70px;
                 left: 0;
                 right: 0;
-                background: #1b4332;
+                background: #0f3b26;
                 flex-direction: column;
                 padding: 20px;
                 text-align: center;
@@ -544,21 +603,25 @@
                 display: block;
             }
             .hero-content h2 {
-                font-size: 32px;
+                font-size: 36px;
             }
             .hero-content h3 {
-                font-size: 18px;
+                font-size: 20px;
             }
-            .trust-badge span {
-                font-size: 10px;
+            .hero-content h4 {
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+            .farm-text {
+                font-size: 12px;
+                letter-spacing: 2px;
             }
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            .stats {
-                flex-direction: column;
-                gap: 20px;
+            .stats-grid, .features-grid, .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             .contact-content {
                 grid-template-columns: 1fr;
@@ -568,8 +631,14 @@
                 flex-direction: column;
                 text-align: center;
             }
-            .footer-links {
-                justify-content: center;
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid, .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .trust-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -578,7 +647,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="Logo.png" alt="Raj Fruits Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/50x50?text=RJ'">
+                <img src="Logo.png" alt="Raj Fruits" class="logo-img" onerror="this.src='https://via.placeholder.com/45x45?text=RJ'">
                 <div class="logo-text">
                     <h1>RAJ FRUITS</h1>
                     <p>Fresh & Natural Since 1980</p>
@@ -588,9 +657,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#fruits">Fruits</a></li>
-                    <li><a href="#mango">Mango Varieties</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#mango">Mango</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -600,56 +667,97 @@
         </div>
     </header>
 
+    <!-- Hero Section - Exactly as you requested -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-logo">
-                    <img src="Logo.png" alt="Raj Fruits" onerror="this.src='https://via.placeholder.com/90x90?text=RJ'">
+                    <img src="Logo.png" alt="Raj Fruits" onerror="this.src='https://via.placeholder.com/80x80?text=RJ'">
                 </div>
                 <h2>RAJ FRUITS</h2>
-                <h3>Fresh & Natural Since 1980</h3>
+                <h3>FRESH & NATURAL</h3>
+                <h4>SINCE 1980</h4>
                 <div class="trust-badge">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
                     <span>40+ YEARS OF TRUST & QUALITY</span>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
                 </div>
-                <p class="location">Courtallam · Tenkasi</p>
+                <p class="farm-text">FARM FRESH · WHOLESALE · RETAIL</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits" class="btn-whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits%20from%20Raj%20Fruits" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP
                     </a>
-                    <a href="#fruits" class="btn-outline">Explore Fruits</a>
+                    <a href="#fruits" class="btn-explore">
+                        EXPLORE FRUITS <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">40+ YEARS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">🌾</div>
+                    <div class="stat-label">OWN FARM</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">🏪</div>
+                    <div class="stat-label">WHOLESALE & RETAIL</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">🍂</div>
+                    <div class="stat-label">SEASONAL FRUITS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">📍</div>
+                    <div class="stat-label">TWO LOCATIONS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features/Trust Section -->
     <section class="features">
         <div class="container">
             <div class="features-grid">
                 <div class="feature-card">
-                    <i class="fas fa-tractor"></i>
-                    <h3>Own Farm Production</h3>
-                    <p>Fresh from our own farms</p>
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Trusted Family Business</h3>
+                    <p>40+ years of excellence</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-medal"></i>
-                    <h3>Premium Quality</h3>
-                    <p>Handpicked with care</p>
+                    <i class="fas fa-tractor"></i>
+                    <h3>Farm Fresh Produce</h3>
+                    <p>From our own farms</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-boxes"></i>
+                    <h3>For All Your Needs</h3>
+                    <p>Wholesale & Retail</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Fresh All Year Round</h3>
+                    <p>Seasonal varieties</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-store"></i>
-                    <h3>Wholesale & Retail</h3>
-                    <p>For all your needs</p>
+                    <h3>Two Locations</h3>
+                    <p>Courtallam</p>
                 </div>
+            </div>
+            <div class="location-badge">
+                <p><i class="fas fa-map-marker-alt"></i> Courtallam, Tenkasi District, Tamil Nadu</p>
             </div>
         </div>
     </section>
 
+    <!-- Fruits Section -->
     <section id="fruits" class="fruits">
         <div class="container">
             <div class="section-header">
@@ -670,6 +778,7 @@
         </div>
     </section>
 
+    <!-- Mango Section -->
     <section id="mango" class="mango">
         <div class="container">
             <div class="section-header">
@@ -689,36 +798,7 @@
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-text">
-                <h2>About Us</h2>
-                <p>For over 40 years, Raj Fruits has been delivering the finest quality fruits from our own farms to your table. Located in Courtallam, Tenkasi, we take pride in freshness and quality.</p>
-                <p>Every fruit is handpicked with care. Whether you need wholesale or retail, we've got you covered!</p>
-                <div class="stats">
-                    <div class="stat"><h4>40+</h4><p>Years of Excellence</p></div>
-                    <div class="stat"><h4>50+</h4><p>Fruit Varieties</p></div>
-                    <div class="stat"><h4>10000+</h4><p>Happy Customers</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Gallery</h2>
-                <p>Fresh from our farms</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="images/gallery1.jpg" alt="Farm" onerror="this.src='https://via.placeholder.com/400x300?text=Farm'"></div>
-                <div class="gallery-item"><img src="images/gallery2.jpg" alt="Harvest" onerror="this.src='https://via.placeholder.com/400x300?text=Harvest'"></div>
-                <div class="gallery-item"><img src="images/gallery3.jpg" alt="Fruits" onerror="this.src='https://via.placeholder.com/400x300?text=Fruits'"></div>
-                <div class="gallery-item"><img src="images/gallery4.jpg" alt="Shop" onerror="this.src='https://via.placeholder.com/400x300?text=Shop'"></div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
@@ -734,7 +814,7 @@
                     <i class="fab fa-whatsapp"></i>
                     <h3>Order on WhatsApp</h3>
                     <p>Click below to inquire about seasonal fruits, prices, and place your order!</p>
-                    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits" class="btn-whatsapp-large" target="_blank">
+                    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits%20from%20Raj%20Fruits" class="btn-whatsapp-large" target="_blank">
                         <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
                     </a>
                 </div>
@@ -742,6 +822,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -754,10 +835,7 @@
                     <a href="#home">Home</a>
                     <a href="#fruits">Fruits</a>
                     <a href="#mango">Mango</a>
-                    <a href="#about">About</a>
-                    <a href="#gallery">Gallery</a>
                     <a href="#contact">Contact</a>
-                    <a href="#privacy">Privacy Policy</a>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -771,44 +849,37 @@
         </div>
     </footer>
 
-    <div id="privacy" class="privacy-modal">
-        <div class="privacy-content">
-            <a href="#" class="close-privacy">&times;</a>
-            <h2>Privacy Policy</h2>
-            <p><strong>Last updated:</strong> January 2024</p>
-            <h4>Information We Collect</h4>
-            <p>When you contact us via WhatsApp, we may collect your name, phone number, and order details.</p>
-            <h4>How We Use Your Information</h4>
-            <p>We use your information to process orders and respond to inquiries. We do not share with third parties.</p>
-            <h4>Contact Us</h4>
-            <p>Call or WhatsApp: +91 88708 79582 | Email: rajfruits@gmail.com</p>
-            <a href="#" class="btn-close">Close</a>
-        </div>
-    </div>
-
-    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits" class="float-whatsapp" target="_blank">
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918870879582?text=Hello%21%20I%27d%20like%20to%20order%20fresh%20fruits%20from%20Raj%20Fruits" class="float-whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
+        // Mobile menu toggle
         document.querySelector('.mobile-menu')?.addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('show');
         });
+
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                if(this.getAttribute('href') === '#privacy') return;
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if(target) target.scrollIntoView({ behavior: 'smooth' });
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                // Close mobile menu if open
                 document.querySelector('nav ul')?.classList.remove('show');
             });
         });
+
+        // Header background change on scroll
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = '#1b4332';
+                header.style.background = '#0f3b26';
             } else {
-                header.style.background = '#2d6a4f';
+                header.style.background = '#1a5d3c';
             }
         });
     </script>
