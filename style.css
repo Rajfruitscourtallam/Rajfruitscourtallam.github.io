@@ -35,16 +35,15 @@ header .container {
     align-items: center;
 }
 
-/* Logo Styles */
-.logo-wrapper {
+.logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .logo-img {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     background: #ffd700;
@@ -52,44 +51,29 @@ header .container {
 }
 
 .logo-text h1 {
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: 1px;
     margin: 0;
 }
 
-/* Navigation Styles */
+.logo-text p {
+    font-size: 10px;
+    opacity: 0.9;
+    margin: 0;
+}
+
 nav ul {
     display: flex;
     list-style: none;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
+    gap: 25px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     transition: color 0.3s;
-    position: relative;
-    padding-bottom: 5px;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #ffd700;
-    transition: width 0.3s;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-    width: 100%;
 }
 
 nav ul li a:hover {
@@ -102,51 +86,17 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Mobile Responsive for Header */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #1b4332;
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-        gap: 15px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    }
-    
-    nav ul.show {
-        display: flex;
-    }
-    
-    .mobile-menu {
-        display: block;
-    }
-    
-    .logo-img {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .logo-text h1 {
-        font-size: 18px;
-    }
-}
-
 /* Hero Section */
 .hero {
-    height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=1200');
+    min-height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=1600');
     background-size: cover;
     background-position: center;
-    position: relative;
     display: flex;
     align-items: center;
     text-align: center;
     margin-top: 70px;
+    position: relative;
 }
 
 .hero-content {
@@ -155,48 +105,58 @@ nav ul li a:hover {
     z-index: 2;
 }
 
-.hero-badge {
-    background: #ffd700;
-    color: #2d6a4f;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
+.hero-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ffd700;
     margin-bottom: 20px;
+    background: white;
+    padding: 10px;
 }
 
 .hero-content h2 {
     font-size: 48px;
-    font-weight: 300;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-.hero-content h1 {
-    font-size: 72px;
-    font-weight: 800;
-    margin: 10px 0;
+.hero-content h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 10px;
 }
 
 .trust-badge {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    background: rgba(255,255,255,0.2);
-    padding: 8px 20px;
-    border-radius: 30px;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 .trust-badge i {
-    font-size: 24px;
     color: #ffd700;
+    font-size: 18px;
+}
+
+.trust-badge span {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.location {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-top: 30px;
 }
 
 .btn-whatsapp, .btn-outline {
@@ -232,7 +192,7 @@ nav ul li a:hover {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -261,7 +221,7 @@ nav ul li a:hover {
 }
 
 /* Fruits Section */
-.fruits, .mango {
+.fruits {
     padding: 80px 0;
 }
 
@@ -294,13 +254,23 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
+.mango-tag {
+    display: inline-block;
+    background: #2d6a4f;
+    color: #ffd700;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
 .fruits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-.fruit-card {
+.fruit-card, .mango-card {
     background: white;
     border-radius: 15px;
     overflow: hidden;
@@ -310,57 +280,36 @@ nav ul li a:hover {
     padding-bottom: 20px;
 }
 
-.fruit-card:hover {
+.fruit-card:hover, .mango-card:hover {
     transform: translateY(-5px);
 }
 
-.fruit-image {
+.fruit-image, .mango-image {
     height: 200px;
     overflow: hidden;
 }
 
-.fruit-image img {
+.fruit-image img, .mango-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s;
 }
 
-.fruit-card:hover .fruit-image img {
+.fruit-card:hover .fruit-image img,
+.mango-card:hover .mango-image img {
     transform: scale(1.1);
 }
 
-.fruit-card h3 {
+.fruit-card h3, .mango-card h3 {
     margin: 15px 0 5px;
     font-size: 20px;
-}
-
-.fruit-card p {
     color: #2d6a4f;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.whatsapp-order {
-    background: #25D366;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.3s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.whatsapp-order:hover {
-    background: #128C7E;
 }
 
 /* Mango Section */
 .mango {
+    padding: 80px 0;
     background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
 }
 
@@ -368,38 +317,6 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
-}
-
-.mango-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    position: relative;
-    transition: transform 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.mango-card:hover {
-    transform: translateY(-5px);
-}
-
-.mango-label {
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    background: #ffd700;
-    color: #2d6a4f;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.mango-card h3 {
-    font-size: 22px;
-    color: #2d6a4f;
-    margin-bottom: 10px;
 }
 
 /* About Section */
@@ -442,14 +359,14 @@ nav ul li a:hover {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
 .gallery-item {
     overflow: hidden;
     border-radius: 15px;
-    height: 250px;
+    height: 280px;
 }
 
 .gallery-item img {
@@ -486,6 +403,15 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #ffd700;
 }
 
 .whatsapp-box {
@@ -539,9 +465,21 @@ footer {
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
 .footer-links {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-links a, .social-links a {
@@ -567,7 +505,65 @@ footer {
     opacity: 0.8;
 }
 
-/* Floating WhatsApp Button */
+/* Privacy Policy Modal */
+.privacy-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.privacy-modal:target {
+    display: flex;
+}
+
+.privacy-content {
+    background: white;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    color: #333;
+}
+
+.close-privacy {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+.privacy-content h2 {
+    color: #2d6a4f;
+    margin-bottom: 20px;
+}
+
+.privacy-content h4 {
+    margin: 20px 0 10px;
+    color: #2d6a4f;
+}
+
+.btn-close {
+    display: inline-block;
+    background: #2d6a4f;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* Floating WhatsApp */
 .float-whatsapp {
     position: fixed;
     bottom: 30px;
@@ -599,6 +595,19 @@ footer {
 @media (max-width: 768px) {
     nav ul {
         display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: #1b4332;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    nav ul.show {
+        display: flex;
     }
     
     .mobile-menu {
@@ -609,8 +618,8 @@ footer {
         font-size: 32px;
     }
     
-    .hero-content h1 {
-        font-size: 48px;
+    .hero-content h3 {
+        font-size: 18px;
     }
     
     .hero-buttons {
@@ -632,11 +641,20 @@ footer {
         text-align: center;
     }
     
+    .footer-links {
+        justify-content: center;
+    }
+    
     .float-whatsapp {
         width: 50px;
         height: 50px;
         font-size: 24px;
         bottom: 20px;
         right: 20px;
+    }
+    
+    .privacy-content {
+        margin: 20px;
+        padding: 30px;
     }
 }
