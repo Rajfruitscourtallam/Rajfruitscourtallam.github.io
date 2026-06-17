@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Fruit Gallery | Raj Fruits</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8f8f8;
+}
+
+header{
+background:#123524;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+color:white;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:10px;
+color:#FFD700;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero{
+background:#123524;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h2{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.gallery{
+width:90%;
+max-width:1400px;
+margin:80px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.card h3{
+padding:20px;
+text-align:center;
+color:#123524;
+}
+
+footer{
+background:#123524;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>Raj Fruits</h1>
+<a href="index.html" class="back-btn">← Back to Home</a>
+</header>
+
+<section class="hero">
+<h2>Fruit Gallery</h2>
+<p>Fresh Seasonal & Exotic Fruits</p>
+</section>
+
+<section class="gallery">
+
+<div class="card">
+<img src="images/mangosteen.jpeg">
+<h3>Mangosteen</h3>
+</div>
+
+<div class="card">
+<img src="images/Rambutan.jpeg">
+<h3>Rambutan</h3>
+</div>
+
+<div class="card">
+<img src="images/Durian.jpeg">
+<h3>Durian</h3>
+</div>
+
+<div class="card">
+<img src="images/Avocado.jpeg">
+<h3>Avocado</h3>
+</div>
+
+<div class="card">
+<img src="images/Orange.jpeg">
+<h3>Orange</h3>
+</div>
+
+<div class="card">
+<img src="images/Jackfruit.jpeg">
+<h3>Jackfruit</h3>
+</div>
+
+<div class="card">
+<img src="images/Apple.jpeg">
+<h3>Apple</h3>
+</div>
+
+<div class="card">
+<img src="images/Star Fruit.jpeg">
+<h3>Star Fruit</h3>
+</div>
+
+<div class="card">
+<img src="images/Gooseberry.jpeg">
+<h3>Gooseberry</h3>
+</div>
+
+</section>
+
+<footer>
+© 2025 Raj Fruits | Courtallam
+</footer>
+
+</body>
+</html>
